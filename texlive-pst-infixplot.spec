@@ -17,8 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 Plotting functions with pst-plot is very powerful but sometimes
@@ -28,20 +26,12 @@ RPN and pst-infixplot styles simplify the usage of pst-plot for
 the beginner, providing macro commands that convert natural
 mathematical expressions to PostScript syntax.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -54,7 +44,6 @@ mathematical expressions to PostScript syntax.
 %doc %{_texmfdistdir}/doc/generic/pst-infixplot/pst-infixplot-doc.ps
 %doc %{_texmfdistdir}/doc/generic/pst-infixplot/pst-infixplot-doc.tex
 %doc %{_texmfdistdir}/doc/generic/pst-infixplot/pst-infixplot.pdf
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -65,5 +54,3 @@ mathematical expressions to PostScript syntax.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
