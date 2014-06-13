@@ -6,7 +6,7 @@
 # catalog-version 0.11
 Name:		texlive-pst-infixplot
 Version:	0.11
-Release:	6
+Release:	7
 Summary:	Using pstricks plotting capacities with infix expressions rather than RPN
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-infixplot
