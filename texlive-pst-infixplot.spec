@@ -1,6 +1,6 @@
 Name:		texlive-pst-infixplot
 Version:	15878
-Release:	1
+Release:	2
 Summary:	Using pstricks plotting capacities with infix expressions rather than RPN
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-infixplot
