@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Using pstricks plotting capacities with infix expressions rather than RPN
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-infixplot
+URL:		https://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-infixplot
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-infixplot.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-infixplot.doc.r%{version}.tar.xz
